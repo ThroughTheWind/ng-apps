@@ -24,6 +24,12 @@
       ],
       "core/*": [
         "dist/core/*"
+      ],
+      "vendors": [
+        "dist/vendors"
+      ],
+      "vendors/*": [
+        "dist/vendors/*"
       ]
     }
   },
