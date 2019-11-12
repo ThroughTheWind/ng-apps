@@ -1,11 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { environment } from '../environments/environment';
+
 import { CoreModule } from '../../../core/src/public-api';
 import { VendorsModule } from '../../../vendors/src/public-api';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
@@ -14,9 +17,8 @@ import { VendorsModule } from '../../../vendors/src/public-api';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule,
-    VendorsModule,
-    BrowserAnimationsModule
+    CoreModule.forRoot(environment),
+    VendorsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,11 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <span class="headline">{{title}}</span>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <span class="fill-remaining-space"></span>       
+        <a *ngIf="!isLoggedIn()" mat-button routerLink="/auth/login">Log In</a>     
+        <a *ngIf="isLoggedIn()" mat-button routerLink="/" (click)="logOut()">Log Out</a>       
+        <a mat-button routerLink="/">Home</a>
+    </mat-toolbar-row>
+</mat-toolbar>

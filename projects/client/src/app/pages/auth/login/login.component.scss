@@ -1,0 +1,21 @@
+
+$padding: 16px;
+$margin: 16px;
+
+.login-ctn {
+    padding: 0px $padding;
+    width: 60%;
+    margin: auto;
+
+    div {
+        margin-top: $margin;
+
+        button, mat-form-field {
+            width: 100%;
+        }
+
+        mat-form-field:not(:first-child) {
+            margin-top: $margin;
+        }        
+    }
+}
