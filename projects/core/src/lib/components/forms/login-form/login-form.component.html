@@ -1,0 +1,59 @@
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-card *ngIf="formStyle === 'card'">
+            <mat-card-header>
+                <div mat-card-avatar><mat-icon>input</mat-icon></div>
+                <mat-card-title>Log In</mat-card-title>
+                <mat-card-subtitle>Use your personal informations to gain access.</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <ng-container *ngTemplateOutlet="formContent"></ng-container>
+            </mat-card-content>
+            <mat-card-actions>
+                <ng-container *ngTemplateOutlet="formActions"></ng-container>
+            </mat-card-actions>
+        </mat-card>
+        <div *ngIf="formStyle === 'default'">
+            <h1>
+                Log In
+            </h1>
+            <p>
+                Use your personal informations to gain access.
+            </p>
+            <div>
+                <ng-container *ngTemplateOutlet="formContent"></ng-container>
+            </div>
+            <div>
+                <ng-container *ngTemplateOutlet="formActions"></ng-container>
+            </div>
+        </div>
+
+        <ng-template #formContent>
+            <div>
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Email" formControlName="email" autofocus>
+                    <mat-error *ngIf="email.errors?.required">
+                        Email is <strong>required</strong>
+                    </mat-error>
+                    <mat-error *ngIf="email.errors?.validEmail">
+                        Email must be valid
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Password" formControlName="password" type="password">
+                    <mat-error *ngIf="password.errors?.required">
+                        Password is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <mat-error *ngIf="invalidCredentials">
+                    <strong>Invalid</strong> Credentials
+                </mat-error>
+            </div>
+        </ng-template>
+        
+        <ng-template #formActions>
+            <button mat-button type="submit" [disabled]="!loginForm.valid" color="primary">Log In</button>
+        </ng-template>
+    </form>
+
+

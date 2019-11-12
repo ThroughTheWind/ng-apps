@@ -1,0 +1,19 @@
+
+$padding: 16px;
+$margin: 16px;
+
+div {
+    margin-top: $margin;
+
+    button, mat-form-field {
+        width: 100%;
+    }
+
+    mat-form-field:not(:first-child) {
+        margin-top: $margin;
+    }        
+}
+
+mat-icon {
+    font-size: 40px;
+}

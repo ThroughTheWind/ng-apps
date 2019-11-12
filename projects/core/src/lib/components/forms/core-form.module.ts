@@ -8,7 +8,7 @@ import { VendorsModule } from '../../../../../vendors/src/public-api';
 
 @NgModule({
     declarations: [
-        
+        LoginFormComponent
     ],
     imports: [
         CommonModule,
@@ -16,7 +16,7 @@ import { VendorsModule } from '../../../../../vendors/src/public-api';
         ReactiveFormsModule
     ],
     exports: [
-        
+        LoginFormComponent
     ]
 })
 export class CoreFormModule {}

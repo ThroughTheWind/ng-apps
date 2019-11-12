@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { VendorsModule } from '../../../../../vendors/src/public-api';
 import { AuthRoutingModule } from './auth-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CoreFormModule } from '../../../../../core/src/public-api';
 
 
 
@@ -13,7 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     VendorsModule,
     AuthRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CoreFormModule
   ]
 })
 export class AuthModule { }
