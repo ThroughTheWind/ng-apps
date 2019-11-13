@@ -28,7 +28,9 @@
               "projects/admin/src/assets"
             ],
             "styles": [
-              "projects/admin/src/styles.scss"
+              "projects/admin/src/styles/variables.scss",
+              "projects/admin/src/styles/theme.scss",
+              "projects/admin/src/styles/style.scss"
             ],
             "scripts": []
           },
@@ -93,7 +95,9 @@
               "projects/admin/src/assets"
             ],
             "styles": [
-              "projects/admin/src/styles.scss"
+              "projects/admin/src/styles/variables.scss",
+              "projects/admin/src/styles/theme.scss",
+              "projects/admin/src/styles/style.scss"
             ],
             "scripts": []
           }
@@ -150,7 +154,9 @@
               "projects/client/src/assets"
             ],
             "styles": [
-              "projects/client/src/styles.scss"
+              "projects/client/src/styles/variables.scss",
+              "projects/client/src/styles/theme.scss",
+              "projects/client/src/styles/style.scss"
             ],
             "scripts": []
           },
@@ -215,7 +221,9 @@
               "projects/client/src/assets"
             ],
             "styles": [
-              "projects/client/src/styles.scss"
+              "projects/client/src/styles/variables.scss",
+              "projects/client/src/styles/theme.scss",
+              "projects/client/src/styles/style.scss"
             ],
             "scripts": []
           }

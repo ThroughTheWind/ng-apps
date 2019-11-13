@@ -30,7 +30,7 @@
 
         <ng-template #formContent>
             <div>
-                <mat-form-field class="full-width">
+                <mat-form-field>
                     <input matInput placeholder="Email" formControlName="email" autofocus>
                     <mat-error *ngIf="email.errors?.required">
                         Email is <strong>required</strong>
@@ -39,12 +39,15 @@
                         Email must be valid
                     </mat-error>
                 </mat-form-field>
-                <mat-form-field class="full-width">
+                <mat-form-field>
                     <input matInput placeholder="Password" formControlName="password" type="password">
                     <mat-error *ngIf="password.errors?.required">
                         Password is <strong>required</strong>
                     </mat-error>
                 </mat-form-field>
+                <div>
+                    <mat-checkbox formControlName="rememberMe">Remember me</mat-checkbox>
+                </div>
                 <mat-error *ngIf="invalidCredentials">
                     <strong>Invalid</strong> Credentials
                 </mat-error>
