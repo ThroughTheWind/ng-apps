@@ -1,0 +1,42 @@
+<mat-card *ngIf="formStyle === 'card'">
+    <mat-card-header>
+        <div mat-card-avatar><mat-icon>input</mat-icon></div>
+        <mat-card-title>Register</mat-card-title>
+        <mat-card-subtitle>Create an account to gain access to our features.</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <ng-container *ngTemplateOutlet="content"></ng-container>
+    </mat-card-content>
+</mat-card>
+<div *ngIf="formStyle === 'default'">
+    <h1>
+        Register
+    </h1>
+    <p>
+        Create an account to gain access to our features.
+    </p>
+    <div>
+        <ng-container *ngTemplateOutlet="content"></ng-container>
+    </div>
+</div>
+
+<ng-template #content>
+    <mat-vertical-stepper [linear]="isLinear" #stepper [selectedIndex]="stepIndex">
+        <mat-step editable="false" [hasError]="loginError" [completed]="loginCompleted">
+            <ng-template matStepLabel>Fill out your login informations</ng-template>    
+            <lib-register-step1-form [subForm]="formLogin"></lib-register-step1-form>         
+        </mat-step>
+        <mat-step editable="false">
+            <ng-template matStepLabel>Fill out your personal informations</ng-template>   
+            <lib-register-step2-form></lib-register-step2-form>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            You are now done.
+            <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+        </mat-step>
+    </mat-vertical-stepper>
+</ng-template>

@@ -4,7 +4,7 @@ import { EnvConfigService } from '../core.module';
 import { EnvConfig } from '../models/env-config';
 import { Observable, from } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Login } from '../models/login';
+import { Login } from '../models/login.interface';
 
 const KEYS = {
   USER: 'USER'
@@ -26,8 +26,11 @@ export class AuthService {
    * Checks wether the user is logged in
    */
   public isLoggedIn(): boolean {
-    const localUser = localStorage.getItem(`${this.envConfig.appLocalStorageKey}_${KEYS.USER}`);
-    return localUser ? (JSON.parse(localUser) ? true : false) : false;
+    return this.getFirebaseUser() ? true : false;
+  }
+
+  public getFirebaseUser(): firebase.User {
+    return this.afAuth.auth.currentUser;
   }
 
   /**

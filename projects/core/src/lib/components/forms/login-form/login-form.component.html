@@ -1,5 +1,5 @@
 
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <mat-card *ngIf="formStyle === 'card'">
             <mat-card-header>
                 <div mat-card-avatar><mat-icon>input</mat-icon></div>
@@ -55,7 +55,7 @@
         </ng-template>
         
         <ng-template #formActions>
-            <button mat-button type="submit" [disabled]="!loginForm.valid" color="primary">Log In</button>
+            <button mat-button type="submit" [disabled]="!form.valid" color="primary">Log In</button>
         </ng-template>
     </form>
 

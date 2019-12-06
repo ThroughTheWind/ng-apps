@@ -5,6 +5,12 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+// HTML Elements
+section {
+    padding: 0px $padding;
+}
+
+
 // Utils css classes
 
 .fill-remaining-space {

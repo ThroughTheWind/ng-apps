@@ -17,7 +17,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { OverlayModule } from '@angular/cdk/overlay';
-import { MatSidenavModule, MatListModule, MatCheckboxModule } from '@angular/material';
+import { MatSidenavModule, MatListModule, MatCheckboxModule, MatStepperModule } from '@angular/material';
 
 
 @NgModule({
@@ -44,7 +44,8 @@ import { MatSidenavModule, MatListModule, MatCheckboxModule } from '@angular/mat
     OverlayModule,
     MatSidenavModule,
     MatListModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatStepperModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -67,7 +68,8 @@ import { MatSidenavModule, MatListModule, MatCheckboxModule } from '@angular/mat
     OverlayModule,
     MatSidenavModule,
     MatListModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatStepperModule
   ]
 })
 export class MaterialModule { }

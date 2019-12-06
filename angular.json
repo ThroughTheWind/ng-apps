@@ -32,7 +32,12 @@
               "projects/admin/src/styles/theme.scss",
               "projects/admin/src/styles/style.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/admin/src/styles"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -158,7 +163,12 @@
               "projects/client/src/styles/theme.scss",
               "projects/client/src/styles/style.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/client/src/styles"
+              ]
+            }
           },
           "configurations": {
             "production": {

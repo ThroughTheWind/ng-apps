@@ -5,11 +5,12 @@ import { VendorsModule } from '../../../../../vendors/src/public-api';
 import { AuthRoutingModule } from './auth-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CoreFormModule } from '../../../../../core/src/public-api';
+import { RegisterComponent } from './register/register.component';
 
 
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, RegisterComponent],
   imports: [
     CommonModule,
     VendorsModule,
